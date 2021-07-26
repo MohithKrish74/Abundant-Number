@@ -1,0 +1,32 @@
+package com.company;
+
+import com.sun.jdi.Value;
+import com.sun.security.jgss.GSSUtil;
+import org.w3c.dom.ls.LSOutput;
+
+import java.security.spec.RSAOtherPrimeInfo;
+import java.util.*;
+//If the factor of the number is summed up and if it is greater than the number given,then it is a Abundant Number.
+public class Main {
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int number=in.nextInt();
+        int sum=0;
+        for(int i=1;i<number;i++)
+        {
+            if(number%i==0)
+            {
+                sum+=i;
+            }
+        }
+
+
+        System.out.println((sum>number)?"Abundant Number":"Not a Abundant Number");
+
+
+
+    }
+}
+
